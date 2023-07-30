@@ -1,6 +1,7 @@
 const express=require('express');
 const router=express.Router();
-const db=require('../model/dbConfig')
+const db=require('../model/dbConfig');
+const auth=require('../middelware/auth')
 
 
 router.post('/create', (req, res) => {
@@ -20,7 +21,7 @@ router.post('/create', (req, res) => {
     res.status(201).send('blog created')
 });
 
-router.get('/get', (req, res) => {
+router.get('/get', auth, (req, res) => {
     const email=req.query.email
 
     let query = `SELECT id, email, blog FROM blogs WHERE email = ?`;
