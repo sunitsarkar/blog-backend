@@ -6,12 +6,12 @@ const userRouter=require('./router/user');
 const blogRouter=require('./router/blog')
 const db=require('./model/dbConfig')
 
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-//     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-//     next();
-//   });
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+  });
 
   
 app.use(cors());
@@ -36,7 +36,7 @@ app.use('/blog',blogRouter)
 //     db.query(sql,(err,result)=>{
 //         if(err) throw err;
 //         console.log(result);
-//         res.send('blog tsble created')
+//         res.send('user tsble created')
 //     })
 // })
 // app.get('/createBlogTable', (req,res)=>{

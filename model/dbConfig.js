@@ -1,10 +1,10 @@
 const mysql=require('mysql')
 
 const db = mysql.createConnection({
-    host: 'sql6.freemysqlhosting.net',
-    user: 'sql6636326',
-    password: 'qE6yjwME7r',
-    database: 'sql6636326'
+    host: 'bzexmgoffknfacl4uhwo-mysql.services.clever-cloud.com',
+    user: 'ucacpkmvngscdk4z',
+    password: '5dCReicAyEnLVynXKtSj',
+    database: 'bzexmgoffknfacl4uhwo'
 });
 
 
