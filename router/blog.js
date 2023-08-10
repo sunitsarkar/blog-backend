@@ -4,7 +4,7 @@ const db=require('../model/dbConfig');
 const auth=require('../middelware/auth')
 
 
-router.post('/create',auth, (req, res) => {
+router.post('/create', (req, res) => {
 
     const { email, blog } = req.body;
 
